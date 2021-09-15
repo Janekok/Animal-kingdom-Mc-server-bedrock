@@ -1,0 +1,28 @@
+public static boolean exception(String cause, StackTraceElement[] ste) {
+  error("");
+  error("[FunnyGuilds] Severe error:");
+  error("");
+  error("Server Information:");
+  error("  FunnyGuilds: " + FunnyGuilds.getFullVersion());
+  error("  Bukkit: " + Bukkit.getBukkitVersion());
+  error("  Java: " + System.getProperty("java.version"));
+  error("  Thread: " + Thread.currentThread());
+  error("  Running CraftBukkit: " + Bukkit.getServer().getClass().getName().equals("org.bukkit.craftbukkit.CraftServer"));
+  error("");
+  
+  if (cause == null || ste == null || ste.length < 1) {
+    error("Stack trace: no/empty exception given, dumping current stack trace instead!");
+    return true;
+  } else {
+    error("Stack trace: ");
+  }
+  
+  error("Caused by: " + cause);
+  for (StackTraceElement st : ste) {
+    error("    at " + st.toString());
+  }
+  
+  error("");
+  error("End of Error.");
+  error("");
+  return false;
