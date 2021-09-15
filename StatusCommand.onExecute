@@ -1,0 +1,5 @@
+public void onExecute(String[] args, CommandSender sender) {
+  String minecraftVersion = compat.getVersion().toString();
+  String bukkitVersion = Bukkit.getName() + (compat.isSpigot() ? " (Paper)" : new String()) + " " + Bukkit.getBukkitVersion();
+  String internalsVersion = compat.getInternals().toString();
+  String dungeonsxlVersion = plugin.getDescription().getVersion();
