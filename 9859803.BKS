@@ -1,0 +1,8 @@
+Bukkit () IPLog: Entity 'Control' {Console.IP : Op player}
+| Op {Motion: File Console.op}
+||  Plugins {Motion: File Plugins.plg}
+|||  Bukkit  {Motion: File Bukkit.main}
+||||  Pocketmine {Motion: File Pocketmine.yml}
+|||||  Server {Motion: File Bukkit.jar}
+
+Connect {server: AnimalKingdomBedrock.aternos.me} {port: 22307} {Env port: 904903#hlk}
